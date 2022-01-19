@@ -1,0 +1,7 @@
+<div class="header">
+    <button (click)="previous()" class="prevMonth"> < </button>
+    <div class="currentMonth">{{month.format("MMMM")}}</div>
+    <button (click)="next()" class="nextMonth"> > </button>
+  </div>
+  <div class="week names"><span class="day">SUN</span><span class="day">MON</span><span class="day">TUE</span><span class="day">WED</span><span class="day">THU</span><span class="day">FRI</span><span class="day">SAT</span></div>
+  <div *ngFor="let week of scope.weeks" class="week"><span ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, allDates: day.isProviderDate, selected: day.date.isSame(selected) }" ng-click="select(day); scrollToProviders(day);" *ngFor="let day of week.days" class="day">{{day.number}}</span></div>

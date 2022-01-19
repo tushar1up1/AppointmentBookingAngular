@@ -1,1 +1,88 @@
 /* You can add global styles to this file, and also import other style files */
+.container {
+    margin: 0 auto;
+    max-width: 1024px;
+  }
+  @media (max-width: 1024px) {
+    .container {
+      padding-left: 54px;
+      padding-right: 54px;
+    }
+  }
+  @media (max-width: 568px) {
+    .container {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+  .dsg-title {
+    color: #282828;
+    word-break: break-word;
+    margin: unset;
+    font-size: 36px;
+    line-height: normal;
+  }
+  @media (max-width: 568px) {
+    .dsg-title {
+      font-size: 24px;
+    }
+  }
+  .dsg-title h3,
+  .dsg-title .heading--h3 {
+    margin-bottom: 6px;
+  }
+  @media (max-width: 1024px) {
+    .dsg-title h3,
+    .dsg-title .heading--h3 {
+      font-size: 24px;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+  }
+  .dsg-title h6,
+  .dsg-title .heading--h6 {
+    line-height: 30px;
+    font-weight: 300 !important;
+    margin-bottom: 16px;
+  }
+  @media (max-width: 1024px) {
+    .dsg-title h6,
+    .dsg-title .heading--h6 {
+      font-size: 16px;
+      line-height: 1.2;
+    }
+  }
+  .dsg-title p {
+    line-height: normal;
+    font-weight: bold;
+  }
+  .dsg-title input {
+    font-size: 16px;
+  }
+  .dsg-title-prefix {
+    color: #1d871e;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 12px;
+  }
+  .button,
+  .buttonSecondary,
+  .buttonTertiary,
+  .button--small,
+  .buttonSecondaryDSG,
+  .buttonNext,
+  .buttonBack,
+  .buttonOptions,
+  .bookingConfirmOption,
+  .button-rate,
+  .requestTile,
+  .requestTileChat,
+  .siteNav-menuItem .button,
+  .siteNav--light .siteNav-menuItem .button {
+    display: inline-block;
+    min-width: 120px;
+    cursor: pointer;
+    transition: all 0.36s ease-in-out;
+    word-break: break-word;
+  }

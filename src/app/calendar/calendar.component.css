@@ -1,0 +1,196 @@
+/*:host {
+    --height: 100px;
+    --border-colour: #ccc;
+  }
+  .vertical-centre {
+    height: var(--height);
+    line-height: var(--height) !important;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .border-box {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  }*/
+
+:host ::ng-deep {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: 12;
+        flex-direction: 12;
+    box-sizing: border-box;
+    background: #fff;
+    margin-bottom: 10px;
+    position: relative;
+    border: 1px solid #efefef;
+    transition: 0.3s;
+    padding: 16px 16px 16px 16px;
+    border-radius: 10px;
+    flex-direction: column;
+}
+:host ::ng-deep >div.header {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    background: rgb(190, 188, 188);
+    height: 50px;
+    color: #282828;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-direction: row;
+        flex-direction: row;
+  }
+:host ::ng-deep >div.header >* {
+    line-height: 100px !important;
+    display: inline-block;
+    vertical-align: middle;
+  }
+:host ::ng-deep >div.header >.prevMonth {
+    transform: rotate(0deg);
+    color: #282828;
+    cursor: pointer;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-preferred-size: 15%;
+        flex-basis: 15%;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+:host ::ng-deep >div.header >.prevMonth >svg {
+    float: left;
+    font-size: small;
+    position: relative;
+    box-sizing: border-box;
+    color: #282828;
+  }
+:host ::ng-deep >div.header >.prevMonth >svg.fa-play {
+    text-align: left;
+    color: #282828;
+    transform: rotate(-180deg);
+  }
+:host ::ng-deep >div.header >.nextMonth {
+    color: #282828;
+    cursor: pointer;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-preferred-size: 15%;
+        flex-basis: 15%;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+:host ::ng-deep >div.header >.nextMonth >svg {
+    float: right;
+    font-size: small;
+    position: relative;
+    box-sizing: border-box;
+    color: #282828;
+  }
+:host ::ng-deep >div.header >.nextMonth >svg.fa-play {
+    text-align: right;
+    display: inline-block;
+    color: #282828;
+  }
+:host ::ng-deep >div.header >.currentMonth {
+    font-weight: 500;
+    box-sizing: border-box;
+    color: inherit;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+    font-size: 28px;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+:host ::ng-deep >div.week {
+    width: 100%;
+  }
+:host ::ng-deep >div.week:first-child {
+    border-top: none;
+    background-color: #004458;
+  }
+:host ::ng-deep >div.week >span.day {
+    float: left;
+    width: 12%;
+    box-sizing: border-box;
+    font-size: 14px;
+    text-align: center;
+    height: 36px;
+    background: rgb(59, 164, 172);
+    cursor: pointer;
+    color: #282828;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    margin: 1%;
+  }
+:host ::ng-deep >div.week >span.day:first-child {
+    border-left: none;
+  }
+:host ::ng-deep >div.week >span.day.today {
+    background: rgba(0,128,153,0.12);
+    border: 2px solid trasnparent;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #004458;
+  }
+:host ::ng-deep >div.week >span.day.allDates {
+    color: #282828;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    border: 2px solid #00c3dd;
+  }
+:host ::ng-deep >div.week >span.day.different-month {
+    color: #9f9f9f;
+  }
+:host ::ng-deep >div.week >span.day.different-month.today {
+    background: rgba(0,128,153,0.1);
+    color: #004458;
+  }
+:host ::ng-deep >div.week >span.day.selected {
+    background: #004458;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 14px;
+    border: 2px solid #00c3dd;
+  }
+:host ::ng-deep >div.week.names>span {
+    color: #000;
+    font-weight: 500;
+  }
+  .dsg-bookingconfirm-navbar {
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 81px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+  }
+  @media (max-width: 1024px) {
+    .dsg-bookingconfirm-navbar {
+      margin-bottom: 54px;
+    }
+  }
+  @media (max-width: 568px) {
+    .dsg-bookingconfirm-navbar {
+      margin-bottom: 36px;
+    }
+  }
