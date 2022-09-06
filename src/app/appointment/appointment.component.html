@@ -1,1 +1,49 @@
-<p>appointment works!</p>
+<div class="providerContainer">
+    <div ng-repeat="provider in providerList" class="div paddingLeft">
+      <div class="providerTile">
+        <div class="providerTile-inner">
+          <div class="row-bio">
+            <div class="providerImageContainer"><img src="" onerror="this.onerror=null;this.src='assets/img/homewood-icon-color.svg'" class="providerImage"/></div>
+            <div class="providerBio">
+              <button class="providerBio-btn">Bio<span class="providerBio-text"></span></button>
+            </div>
+          </div>
+          <!--div class="row-contents">
+            <div class="row-provider-info">
+              <div class="providerNameContainer">
+                <p class="providerName">{{provider.providerName}}</p>
+              </div>
+              <div ng-class="{'scrollable': provider.timeAvailables.length &gt; pageSize}" class="providerAvaliabilityContainer">
+                <p class="row-title">{{'AVAILABLE_TIME' | translate}}</p>
+                <div class="providerTimesContainer">
+                  <div class="paginationBtns">
+                    <div ng-hide="currentPage &lt;= 0" ng-click="currentPage=currentPage-1" class="prev"><i class="fa fa-play"></i></div>
+                  </div>
+                  <div ng-repeat="availableTime in provider.timeAvailables | buttonSlider:currentPage*pageSize | limitTo: pageSize" class="timeBtns">
+                    <button value="time" ng-class="{'selected' : (providerIndex===$parent.$index+providerTilePage*pageSize &amp;&amp; btnIndex===$index) }" ng-click="selectedTimeFunc(availableTime, $parent.$index+providerTilePage*pageSize, $index)" class="providerTimeBtn">{{availableTime.displayTime}}</button>
+                  </div>
+                  <div class="paginationBtns">
+                    <div ng-hide="currentPage &gt;= provider.timeAvailables.length/pageSize - 1" ng-click="currentPage=currentPage+1" class="next"><i class="fa fa-play"></i></div>
+                  </div>
+                </div>
+                <<span ng-show="provider.timeAvailables.length &gt; 2" class="scrollHint">{{'SWIPE_MORE' | translate}}</span>
+              </div>
+            </div>
+            <div class="row-appointment-info">
+              <div ng-show="providerIndex===$index+providerTilePage*pageSize" style="flex-direction: column" class="providerModalityContainer">
+                <p class="row-title">{{'MEETING_FORMAT' | translate}}</p>
+                <button ng-show="availableByVideo===true &amp;&amp; providerIndex===$index+providerTilePage*pageSize" ng-class="{'modalitySelected' : (availableByVideo===true &amp;&amp; providerIndex===$index+providerTilePage*pageSize &amp;&amp; modalityType==='Video') }" ng-click="videoModeSelected(); bookAppointment(provider, $index)" class="providerVideoModality"><span class="icon icon-appt-video"></span><span class="modalityText">{{'BY_VIDEO' | translate}}</span></button>
+                <button ng-show="availableByPhone===true &amp;&amp; providerIndex===$index+providerTilePage*pageSize" ng-class="{'modalitySelected' : (availableByPhone===true &amp;&amp; providerIndex===$index+providerTilePage*pageSize &amp;&amp; modalityType==='Phone') }" ng-click="phoneModeSelected(); bookAppointment(provider, $index)" class="providerPhoneModality"><span class="icon icon-appt-phone"></span><span class="modalityText">{{'BY_PHONE' | translate}}</span></button>
+              </div>
+            </div>
+          </div>
+        </div-->
+      </div>
+    </div>
+    <div style="display:flex;justify-content:center;flex-direction:row">
+      <div class="providerTile--pagination">
+        <button ng-hide="providerTilePage &lt;= 0" ng-click="providerTilePage=providerTilePage-1" class="prev button button--orangeLight"><span class="icon-arrow-left"></span><span>Prev</span></button>
+        <button ng-hide="providerTilePage &gt;= providerListByDate.providers.length/providersTilePerPage - 1" ng-click="providerTilePage=providerTilePage+1" class="next button button--orangeLight"><span>Next</span><span class="icon-arrow-right"></span></button>
+      </div>
+    </div>
+  </div>

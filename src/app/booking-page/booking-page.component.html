@@ -1,29 +1,8 @@
-<!--div class="nav-breadcrumbs">
-    <div class="container">
-      <div class="section-left">
-        <nav class="breadcrumbs">
-          <ul>
-            <li><a ui-sref="root.members.dsg.dashboard">{{'DASHBOARD' | translate}}</a></li>
-            <li><a ui-sref="root.members.dsg.assessment">{{'PATHFINDER' | translate}}</a></li>
-            <li><a href="#">{{'BOOK_SESSION' | translate}}</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="section-right"><a ui-sref="root.members.dsg.dashboard" ng-click="gtmBrowseEvent()" class="dashboard-link">{{'BACK_TO_MY_DASHBOARD' | translate}}</a></div>
-    </div>
-  </div-->
-  <div>
-    <div ng-hide="providersAvailabilities.selectedDate" class="container has-spinner dsg-providerMatchContainer">
-      <div class="titleContainer">
-        <!--.dsg-titleh1.heading--h3 Please wait while we are retrieving counsellors schedule for you
-        
-        <div class="spinner"></div-->
-      </div>
-    </div>
-    <div ng-show="providersAvailabilities.selectedDate" class="container dsg-providerMatchContainer">
+  <div style="display: flex;">
+    <div class="container dsg-providerMatchContainer">
       <div class="titleContainer">
         <div class="dsg-title">
-          <h1 class="heading--h3">Select Date And Time With Professional</h1>
+          <h1 class="heading--h3">Select Date </h1>
         </div>
       </div>
       <div id="col-calnedar" style="flex-direction: column" class="col-left">
@@ -33,26 +12,19 @@
           <!--provider-calendar selected="day" lang="lang" my-provider="providersAvailabilities" style="flex-direction: column"></provider-calendar-->
           <p class="d-none--palm">Note: Days with a blue circle have open appointments</p>
         </div>
-        <!--div ng-click="checkFccAgent(serviceinstanceId)" style="flex-direction:column;" class="need-appointment dashboard-tile dashboard-tile-dark d-none--palm">
-          <h5>Looking for a different time?</h5>
-          <p>Contact us and we may be able to find you a time more convenient for you.</p><a class="button button--orangeLight">More Options</a>
-        </div-->
       </div>
-      <div id="col-providers" ng-show="providersAvailabilities.selectedDate" class="col-right">
-        <div class="availableDate-container">
-          <p style="flex-direction: column" class="providerPage-text1 paddingLeft">Available on&nbsp<span class="providerPage-text2"><!--{{ displayDate }}--></span></p>
+    </div>  
+    <div id="col-providers" class="col-right container dsg-providerMatchContainer">
+      <div class="titleContainer">
+        <div class="dsg-title">
+          <h1 class="heading--h3">Provider Time Table</h1>
         </div>
-        <!--provider-availability selected="day" provider-List-By-Date="providerListByDate" lang="lang" service-instance-id="serviceinstanceId" data-method="saveBookingData" bookingmethod="bookingmethod"></provider-availability-->
-        <!--div ng-click="checkFccAgent(serviceinstanceId)" style="flex-direction:column;" class="need-appointment dashboard-tile dashboard-tile-dark d-none d-block--palm">
-          <h5>Looking for a different time?</h5>
-          <p>Contact us and we may be able to find you a time more convenient for you.</p><a class="button button--orangeLight">More Options</a>
-        </div-->
       </div>
-      <!--div class="providerPage--footerContainer-desktop">
-        <p class="providerPage--footerText providerPage-text1 d-none--portable">If you wish to receive services in a language other than English or French please call at 1-800-663-1142. To change between services in English and French please use the language selector in the upper right corner of the screen.</p>
+      <app-appointment></app-appointment>
+      <!--div ng-click="checkFccAgent(serviceinstanceId)" style="flex-direction:column;" class="need-appointment dashboard-tile dashboard-tile-dark d-none d-block--palm">
+        <h5>Looking for a different time?</h5>
+        <p>Contact us and we may be able to find you a time more convenient for you.</p><a class="button button--orangeLight">More Options</a>
       </div-->
     </div>
-    <!--div class="providerPage--footerContainer d-none">
-      <p class="providerPage--footerText providerPage-text1">If you wish to receive services in a language other than English or French please call at 1-800-663-1142. To change between services in English and French please use the language selector in the upper right corner of the screen.</p>
-    </div-->
+
   </div>
